@@ -3,12 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>WebAR_protex_shere</title>
+
+  <!-- model-viewer用のheadタグ -->
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  
 </head>
 
 <body>
 <main>
   <h1>ARサンプルWebページ</h1>
+  
   <br>
+  
   <h2>usdz挿入</h2>
   
  
@@ -24,10 +33,20 @@
     <a rel="ar" href="FPZ.usdz">
       <img src="" alt="スクリーンショットFPZ.png">
     </a>
-  <!-- usdz挿入ここまで -->
   </p>
   
+  <br>
+  <h2>model-viewer挿入</h2>
   
+  <p><h3>FP-90</h3>
+  <!-- 以下model-viewer挿入 -->
+    <model-viewer preload poster="スクリーンショットFP-90.png" src="FP-90.glb" ios-src="FP-90.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
+  </p> 
+  
+    <p><h3>FPZ</h3>
+  <!-- 以下model-viewer挿入 -->
+    <model-viewer preload poster="スクリーンショットFPZ.png" src="FPZ.glb" ios-src="FPZ.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
+  </p> 
   
   
 
