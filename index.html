@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WebAR_protex_shere</title>
+  <title>ARサンプルWebページ</title>
 
   <!-- model-viewer用のheadタグ -->
   <!-- Loads <model-viewer> for modern browsers: -->
@@ -26,14 +26,14 @@
     height: 400px;
   }
   </style>
-  
 </head>
+  
 <body>
 <div class="wrapper">
   
   <h1 style="text-align:center">ARサンプルWebページ</h1>
   <br>
-  <h2 style="text-align:center">usdz挿入</h2>
+  <h2 style="text-align:center">表示方法①</h2>
   
  
   <p><h3 style="text-align:center">FP-90</h3>
@@ -49,6 +49,18 @@
       <img src="スクリーンショットFPZ.png" alt="サンプル">
     </a>
   </p>
+  
+  <details>
+    <summary>詳細</summary>
+    <h3>特徴</h3>
+    対応端末では静止画の右上にAR表示ボタンが出る。
+    未対応端末にはこれまでと変わらずに画像を表示できる。
+    導線が分かり辛いので＜ARで表示する＞などリンクを別途つけるのがよい
+    <h3>対応デバイス</h3>
+    iOS12以降搭載のiPhoneまたはiPad<br>
+    <h3>対応ブラウザ</h3>
+    Safari,Chrome 
+  </details>
   
   <br>
   <h2 style="text-align:center">model-viewer挿入</h2>
@@ -67,7 +79,20 @@
   <!-- 以下model-viewer挿入 -->
     <model-viewer class="ar-model" preload poster="スクリーンショットFPZ_red.png" src="FPZ_red.glb" ios-src="FPZ.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
   </p> 
-  
+
+  <details>
+    <summary>詳細</summary>
+    <h3>特徴</h3>
+    対応端末では静止画の右上にAR表示ボタンが出る。
+    AR未対応端末でもサイト上の3Dモデル表示はできる。
+    外部スクリプトを読み込む必要があるので少しロードする。
+    <h3>対応デバイス</h3>
+    iOS12以降搭載のiPhoneまたはiPad<br>
+    ARCore対応Android端末<a href="https://developers.google.com/ar/discover/supported-devices#ios" target="_blank">ARCore supported devices</a><br>
+    3D表示のみならPCも可能
+    <h3>対応ブラウザ</h3>
+    Safari,Chrome,IE,Firefoxなど
+  </details>
   
 </div>
 </body>
